@@ -1,0 +1,39 @@
+import java.util.*;
+public class insert_element
+{
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the size of array: ");
+		int n=s.nextInt();
+		int ar[]=new int[n];
+		int i;
+		System.out.println("Enter the values of array: ");
+		for(i=0;i<n;i++)
+		{
+		    ar[i]=s.nextInt();
+		}
+		System.out.println("Enter the element: ");
+		int x=s.nextInt();
+		System.out.println("Enter the position of the element: ");
+		int pos=s.nextInt();
+		
+		int ar2[]=new int[n+1];
+		for(i=0;i<n+1;i++)
+		{
+		    if(i<pos)
+		    {
+		       ar2[i]=ar[i]; 
+		    }
+		   else if (i==pos)
+		    {
+		        ar2[i]=x;
+		    }
+		    else 
+		    {
+		        ar2[i]=ar[i-1];
+		    }
+		    System.out.println(ar2[i]+" ");
+		}
+	}
+}
